@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>Screen Vault Tracker</title>
+    <script>
+      (function () {
+        try {
+          if (localStorage.getItem('app-theme') === 'dark') {
+            document.documentElement.classList.add('dark-theme');
+            document.body ? document.body.classList.add('dark-theme') : null;
+          }
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body>
+    <script>
+      (function () {
+        try {
+          if (localStorage.getItem('app-theme') === 'dark') {
+            document.body.classList.add('dark-theme');
+          }
+        } catch (e) {}
+      })();
+    </script>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
